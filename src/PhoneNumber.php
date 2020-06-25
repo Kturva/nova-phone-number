@@ -43,6 +43,18 @@ class PhoneNumber extends Field
     }
 
     /**
+     * Tells the VueJS component to disable masking
+     * @param bool $disableFormat
+     * @return PhoneNumber
+     */
+    public function disableFormat(bool $disableFormat=true)
+    {
+        return $this->withMeta([
+            'disableFormat' => $disableFormat,
+        ]);
+    }
+
+    /**
      * Sets a custom placeholder
      * @param string $newPlaceholder
      * @return PhoneNumber
