@@ -40,6 +40,10 @@ export default {
             return this.field.name
         },
         mask() {
+            if (this.field.disableFormat) {
+                return null;
+            }
+
             if (this.field.format) {
                 return this.field.format;
             }
